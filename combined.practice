@@ -1,0 +1,259 @@
+# Vim Practice
+# by Duane Johnson
+
+# <leader>pn to go to the next exercise
+# <leader>pp to duplicate the practice text
+# <leader>pd to delete a duplicated practice text
+# <leader>pa to create a folded answer 
+# <leader>pe to create a new exercise
+
+Open the following fold:#{{{1
+
+#{{{
+  1. This folds over 4 lines
+  2. Line 2
+  3. Line 3
+  4. Line 4
+#}}}
+
+#{{{ Answer:
+  l
+  za
+  zo
+#}}}
+#}}}
+Close the following fold: (move to the line and press 'l', 'za' or 'zo')#{{{1
+
+#{{{
+  1. This folds over 4 lines
+  2. Line 2
+  3. Line 3
+  4. Line 4
+#}}}
+#{{{ Answer:
+  za
+  zc
+#}}}
+#}}}
+Create a fold from the following block:#{{{1
+
+  1. This folds over 4 lines
+  2. Line 2
+  3. Line 3
+  4. Line 4
+
+#{{{ Answer:
+ :set fdm=marker<cr>
+ ?^$ozf/^$/e
+#}}}
+#}}}
+Navigate to the previous fold, and then to the one before that.#{{{1
+#{{{ Answer:
+> zkzk
+#}}}#}}}
+Mark this line.#{{{
+#{{{ Answer:
+> mm
+#}}}#}}}
+Move to the top of the file, then return to the mark.#{{{
+#{{{ Answer:
+> gg
+#}}}#}}}
+Move to the bottom of the file, then return to the mark.#{{{
+#{{{ Answer:
+> G
+#}}}#}}}
+Move the cursor to the top of the window.#{{{
+#{{{ Answer:
+> H
+#}}}#}}}
+Move the cursor to the bottom of the window.#{{{
+#{{{ Answer:
+> L
+#}}}#}}}
+Move the cursor to the middle of the window.#{{{
+#{{{ Answer:
+> M
+#}}}#}}}
+Go back to previous jump (i.e. bottom of the window, top of window, bottom of the file, etc.), then go forward to this.#{{{
+#{{{ Answer:
+> C-O
+#}}}#}}}
+Using a macro recording, prefix the first and third words of each#{{{
+line with a double dash ("--"):
+  one two three four
+  five six seven eight
+  nine ten eleven twelve
+#{{{ Answer:
+> qqI--<Esc>lwwi--<Esc>jq@q@@
+#}}}#}}}
+Display the contents of the register where you recorded the macro:#{{{
+#{{{ Answer:
+> "qp
+#}}}#}}}
+Modify the above macro to use underscores instead of dashes, and#{{{
+then read the macro back into the register.
+#{{{ Answer:
+> :s/-/_/g
+> "qy
+#}}}#}}}
+Using the NERD Comment plugin, toggle comment these lines:#{{{
+  test {
+    this {
+      line
+    }
+  }
+#{{{ Answer:
+> V4j?
+#}}}#}}}
+Restore the Visual Mode selection that you just used above.#{{{
+#{{{ Answer:
+> gv
+#}}}#}}}
+Using the 'surround' plugin, remove the single quotes. #{{{
+  'surround'
+#{{{ Answer:
+> wds'
+#}}}#}}}
+Remove parentheses:#{{{
+  (this is a parenthetical statement)
+#{{{ Answer:
+> wds)
+#}}}#}}}
+Remove tags:#{{{
+  <b>Word</b>
+#{{{ Answer:
+> C-T
+#}}}#}}}
+Using 'surround', remove the _value and replace with ['value']:#{{{
+  config_value
+#{{{ Answer:
+> f_xves'vEs]
+#}}}#}}}
+Add parentheses around the x == 3:#{{{
+  if x == 3 {
+  }
+#{{{ Answer:
+> fxvf3s)
+#}}}#}}}
+Surround the above two lines in curly braces.#{{{
+#{{{ Answer:
+> VjS{
+#}}}#}}}
+Show the contents of all registers.#{{{
+#{{{ Answer:
+> :reg
+#}}}#}}}
+Yank the following line into register 'a':#{{{
+  A line for register 'a'.
+#{{{ Answer:
+> "ayy
+#}}}#}}}
+Append the following line to register 'a':#{{{
+  Now register 'a' has two lines.
+#{{{ Answer:
+> "Ayy
+#}}}#}}}
+Put the two lines in register 'a' below:#{{{
+#{{{ Answer:
+> "ap
+#}}}#}}}
+Delete the middle word:#{{{
+  Fabulous Text Editing
+#{{{ Answer:
+> wwdw
+#}}}#}}}
+Delete this line:#{{{
+  You have a job to do.
+#{{{ Answer:
+> dd
+#}}}#}}}
+And this one:#{{{
+  Now show how capable you are!
+#{{{ Answer:
+> dd
+#}}}#}}}
+Put the 'You have a job to do' line below, using the register for "two deletes ago":#{{{
+#{{{ Answer:
+> "2p
+#}}}#}}}
+Put the word 'Text' below, using the register for "small deletes":#{{{
+#{{{ Answer:
+> "-p
+#}}}#}}}
+Change the text from the | mark to the end of the line:#{{{
+  This is a sent|ence with stuff that needs to change.
+#{{{ Answer:
+> f|C
+#}}}#}}}
+In Insert Mode, shift the following line right by 2 tab widths:#{{{
+  I feel too left
+#{{{ Answer:
+> C-T
+#}}}#}}}
+In Insert Mode, shift the following line LEFT by 2 tab widths:#{{{
+      I feel too right
+#{{{ Answer:
+> C-D
+#}}}#}}}
+In Insert Mode, add a word at the | mark, then use a temporary Normal Mode command to skip a word, then insert another word:#{{{
+  Feel free to |insert a word.
+#{{{ Answer:
+> word C-O w word
+#}}}#}}}
+In Insert Mode, delete everything before the |:#{{{
+  If you add |words, please clean up after you're done
+#{{{ Answer:
+> C-U
+#}}}#}}}
+Replace the word 'tiger' with 'bear' in the following three lines:#{{{
+  The tiger lived in the jungle.
+  There were no other tigers like this tiger.
+  Tigers are dangerous.
+#{{{ Answer:
+> \sbear<Cr>
+#}}}#}}}
+Highlight the following lines and delete those that contain hash symbols:#{{{
+  # Comment
+  This is text
+  # Another comment
+  Some more text
+#{{{ Answer:
+> :g/\#/d
+#}}}#}}}
+Undo the changes, and remove lines that DO NOT contain hash symbols#{{{
+#{{{ Answer:
+> :v/\#/d
+#}}}#}}}
+Reverse the following lines:#{{{
+  1. First line
+  2. Second line
+  3. Third line
+  4. Fourth line
+#{{{ Answer:
+> V4j:g/^/m'<
+#}}}#}}}
+Mark the following line, then select the above 4 lines and copy them to the mark:#{{{
+  Mark this line.
+#{{{ Answer:
+> mm
+> (select 4 lines)
+> :g//t'm
+#}}}#}}}
+Edit another file in this window, but don't save the changes you've made to this file.#{{{
+#{{{ Answer:
+> :hide e other.txt
+#}}}#}}}
+Open the NERD Explorer as a vertical split window.#{{{
+#{{{ Answer:
+> \f
+#}}}#}}}
+Choose a file in the Explorer and then open it in a new vertical split window.#{{{
+#{{{ Answer:
+> s
+#}}}#}}}
+Open a help window, then rearrange as a vertical split.#{{{
+#{{{ Answer:
+> :h
+> CTRL-W_H
+#}}}#}}}
