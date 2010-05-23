@@ -1,5 +1,5 @@
 " Vim filetype plugin
-" Language:		Practice
+" Language:		kata
 " Maintainer:		Duane Johnson
 
 " Only do this when not done yet for this buffer
