@@ -8,8 +8,6 @@ if exists("b:did_ftplugin")
 endif
 let b:did_ftplugin = 1
 
-au BufNewFile,BufRead *.kata  set filetype=kata
-
 setlocal commentstring=#%s foldmethod=marker
 setlocal nospell nohlsearch
 
@@ -25,6 +23,7 @@ function! KataNextQuestion()
   normal j
 endfunction
 nnoremap <buffer> <silent> Q :call KataNextQuestion()<cr>
+nnoremap <buffer> <silent> <LocalLeader>kn :call KataNextQuestion()<cr>
 
 function! KataThisQuestion()
   call search("(\\d\\+)", "bc")
