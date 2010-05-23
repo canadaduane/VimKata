@@ -15,9 +15,9 @@ Each practice session--called a 'kata'--should take about 20 minutes, or a
 little more if it is your first time.  When you have reduced the time to under
 5 minutes, you should move on to the next kata.
 
-Many of the answers to the questions are visible right below the question after
-the '>' marker.  Each answer assumes that your cursor is positioned on the line
-below the question at the first character on the line.
+You will find the answer to each question marked by a '>'.  You should be able
+to type the answer exactly and get the correct result. Each answer assumes that
+your cursor is positioned on the first character of the line below the question
 
 Tip: Press 'j' to move down.
 
@@ -30,21 +30,20 @@ Pressing <ESC>:q! will discard any changes.
 
 (1)  Move the cursor down:
 
+
 > j
 
 (2) Move the cursor up:
-  
+ 
+
 > k
 
-(3) Move the cursor left:
+(3) Move the cursor right, then left:
+  
 
-> h
+> lh
 
-(4) Move the cursor right:
-
-> l
-
-(5) Follow the path from 'o' to 'x':
+(4) Follow the path from 'o' to 'x':
 o---|  |--|   |--|
     |--|  | |-|  |
   |-----| |-|  |-|
@@ -52,63 +51,37 @@ o---|  |--|   |--|
 
 > lllljlllkllljjllkllkllljjhhjhhhhhhhkhhhhhhjllll
 
-(6) Delete the . in the following line:
+(5) Delete the . in the following line:
 .
 
 > x
 
-(7) Delete the .'s in the following lines:
+(6) Delete the .'s in the following lines:
 .*..*.***.*
 ***.**.*.**
 
 > xlxxlxlllxjhhxllxlx
 
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-		      Lesson 1.4: TEXT EDITING - INSERTION
+(7) Insert the text 'welcome', and return to normal mode:
 
 
-			** Press  i  to insert text. **
+> iwelcome
 
-  1. Move the cursor to the first line below marked --->.
+(8) Insert the missing text in line 1 using line 2 as a guide:
+Exclene is; del prac is wa we.
+Excellence is our goal; deliberate practice is what we praise.
 
-  2. To make the first line the same as the second, move the cursor on top
-     of the first character AFTER where the text is to be inserted.
+> llliellillllicllllli our goallllllliiberatelllllliticellllllihllitlllli praise
 
-  3. Press  i  and type in the necessary additions.
+(9) Append 'kata' to the end of this line:
+The end of one kata is the beginning of another
 
-  4. As each error is fixed press <ESC> to return to Normal mode.
-     Repeat steps 2 through 4 to correct the sentence.
+> A kata
 
----> There is text misng this .
----> There is some text missing from this line.
+(10) Without moving the cursor, append 'ndigo' to the letter 'I':
+I will make the world beautiful.
 
-  5. When you are comfortable inserting text move to lesson 1.5.
-
-
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-		     Lesson 1.5: TEXT EDITING - APPENDING
-
-
-			** Press  A  to append text. **
-
-  1. Move the cursor to the first line below marked --->.
-     It does not matter on what character the cursor is in that line.
-
-  2. Press  A  and type in the necessary additions.
-
-  3. As the text has been appended press <ESC> to return to Normal mode.
-
-  4. Move the cursor to the second line marked ---> and repeat 
-     steps 2 and 3 to correct this sentence.
-
----> There is some text missing from th
-     There is some text missing from this line.
----> There is also some text miss
-     There is also some text missing here.
-
-  5. When you are comfortable appending text move to lesson 1.6.
+> andigo
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		     Lesson 1.6: EDITING A FILE
