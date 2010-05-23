@@ -7,9 +7,11 @@ The project is currently maintained by Duane Johnson and Barry Arthur.
 
 == Quick Start
 
-Diving into VimKata is as simple as:
+Once installed, diving into VimKata is as simple as:
 
   :VimKata <belt>
+
+where <belt> is a color such as white, yellow, green, blue, red, or black.
 
 == Resources
 
