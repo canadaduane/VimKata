@@ -24,6 +24,6 @@ highlight link KataPlainText Function
 highlight link KataAnswer Define
 highlight link KataComment Comment
 
-let b:current_syntax = "vimkata"
+let b:current_syntax = "kata"
 
 " vim: wrap et sw=2 sts=2:

@@ -1,0 +1,31 @@
+= VimKata: The path to Vim Mastery
+
+VimKata is a series of exercises specially graded to progressively develop your
+skills in the venerable vim editor.
+
+The project is currently maintained by Duane Johnson and Barry Arthur.
+
+== Quick Start
+
+Diving into VimKata is as simple as:
+
+  :VimKata <belt>
+
+== Resources
+
+=== Website:
+
+http://github.com/canadaduane/VimKata
+
+=== Katas:
+
+http://github.com/canadaduane/VimKata/blob/master/vim_1_white.kata
+
+=== Bug Tracker / Wiki:
+
+http://github.com/canadaduane/VimKata/issues
+
+=== Source Code:
+
+http://github.com/canadaduane/VimKata
+
