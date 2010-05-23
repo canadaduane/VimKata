@@ -21,38 +21,16 @@ below the question at the first character on the line.
 
 Tip: Press 'j' to move down.
 
-Tip: To quit vim at any time, press <ESC>:q! and then press enter.
-
-#(dahu): I think we shouldn't be teaching :q! to quit *vim* at any time - they might do that on a file they just spent hours painstakingly editing, only to find that they've just carped it.
-.
 Tip: To quit this kata at any time, press <ESC>:q! and then press enter.
 Pressing <ESC>:q! will discard any changes.
-.
-Actual wording I leave up to you - just a suggestion.
 
 +-----------------------------------------------------------------------------+
 |    Ready?  Begin!                                                           |
 +-----------------------------------------------------------------------------+
 
-# Note: The following will bind '?' to 'go to next question'
-# :nnoremap ? :call search("(\\d\\+)") <Bar> normal j<Cr>
-
-#(dahu): a better way to do that map is:
-nnoremap ? /(\d/1<cr>
-but I think mapping ? is dubious. It's used to do reverse searching in vim.
-might I suggest + instead?
-or ctrl+Enter (<C-Enter>)
-or Q (but if that's miss-typed as q then the initiate (youngling?) might panic)
-we can't use K (for kata) because that's the default man-page key
-we could create a command, like :NextQestion, or :NextKata, but that might frustrate initiates
-thoughts?
-
 (1)  Move the cursor down:
 
 > j
-
-#(dahu): um... are we going to fold the answes eventually? Or were you thinking
-of leaving them unfolded for initiates in the whitebelt kata?
 
 (2) Move the cursor up:
   
@@ -66,25 +44,13 @@ of leaving them unfolded for initiates in the whitebelt kata?
 
 > l
 
-(5) Follow the path from 'o' to 'o':
+(5) Follow the path from 'o' to 'x':
 o---|  |--|   |--|
     |--|  | |-|  |
   |-----| |-|  |-|
-  |---o |------|
+  |---x |------|
 
 > lllljlllkllljjllkllkllljjhhjhhhhhhhkhhhhhhjllll
-
-#(dahu): You know how I said I'd like to be able to execute the answers as a
-proof (for our own sanity and professional standing if nothing else)? Well try
-this:
-* move to the first l in the answer line above
-* type: "ay$
-* move to the left-most o below the (5) above
-* type: @a
-Your cursor should move to the o at the end of your maze. Nice, eh?
-.
-By the way, maybe we could change it to be "from 'o' to 'x':" to save confusion?
-(thanks, Captain Obvious!)
 
 (6) Delete the . in the following line:
 .
@@ -97,7 +63,6 @@ By the way, maybe we could change it to be "from 'o' to 'x':" to save confusion?
 
 > xlxxlxlllxjhhxllxlx
 
-#(dahu): remember to try the check macro trick again :-)
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		      Lesson 1.4: TEXT EDITING - INSERTION
