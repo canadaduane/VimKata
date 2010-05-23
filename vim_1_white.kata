@@ -21,14 +21,12 @@ below the question at the first character on the line.
 
 Tip: Press 'j' to move down.
 
-Tip: To quit vim at any time, press <ESC>:q! and then press enter.
+Tip: To quit this kata at any time, press <ESC>:q! and then press enter.
+Pressing <ESC>:q! will discard any changes.
 
 +-----------------------------------------------------------------------------+
 |    Ready?  Begin!                                                           |
 +-----------------------------------------------------------------------------+
-
-# Note: The following will bind '?' to 'go to next question'
-# :nnoremap ? :call search("(\\d\\+)") <Bar> normal j<Cr>
 
 (1)  Move the cursor down:
 
@@ -46,11 +44,11 @@ Tip: To quit vim at any time, press <ESC>:q! and then press enter.
 
 > l
 
-(5) Follow the path from 'o' to 'o':
+(5) Follow the path from 'o' to 'x':
 o---|  |--|   |--|
     |--|  | |-|  |
   |-----| |-|  |-|
-  |---o |------|
+  |---x |------|
 
 > lllljlllkllljjllkllkllljjhhjhhhhhhhkhhhhhhjllll
 
@@ -64,6 +62,7 @@ o---|  |--|   |--|
 ***.**.*.**
 
 > xlxxlxlllxjhhxllxlx
+
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		      Lesson 1.4: TEXT EDITING - INSERTION
