@@ -7,7 +7,6 @@ o---|  |--|   |--|
 
 > lllljlllkllljjllkllkllljjhhjhhhhhhhkhhhhhhjllll
 
-[movement-along-a-path]
 (2) Follow the path from 'o' to 'x':
 o-| |-|  |--| |--|
   |-| ||-|  | |  |
@@ -23,7 +22,6 @@ o-| |-|  |--| |--|
 
 > xlxxlxlllxjhhxllxlx
 
-[move-and-delete]
 (2) Delete the .'s in the following lines:
 ***.**.*.**
 .*..*.***.*

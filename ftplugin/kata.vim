@@ -11,12 +11,25 @@ let b:did_ftplugin = 1
 setlocal commentstring=#%s foldmethod=marker
 setlocal nospell nohlsearch
 
-function! KataRenumber()
+function! KataRenumber() range
   let b:k_count = 1
-  exe ":g/^(\\d\\+/s//\\='('.b:k_count/ | let b:k_count += 1"
-  norm ``
+  exe a:firstline . ',' . a:lastline . "g/^(\\d\\+/s//\\='('.b:k_count/ | let b:k_count += 1"
 endfunction
-nnoremap <buffer> <silent> <LocalLeader>kr :call KataRenumber()<cr>
+nnoremap <buffer> <silent> <LocalLeader>kr ms :1,$ call KataRenumber()<cr>`s
+
+function! KataGroupRenumber()
+  let group_boundary = '^\[.\{-}\]$'
+
+  " Locate the boundary of the group we're in
+  let firstline  = search(group_boundary,'bnW') + 1
+  let lastline   = search(group_boundary, 'nW') - 1
+  if lastline < 0
+    let lastline = line('$')
+  endif
+
+  exe firstline . ',' . lastline 'call KataRenumber()' 
+endfunction
+nnoremap <buffer> <silent> <LocalLeader>kgr ms :call KataGroupRenumber()<cr>`s
 
 function! KataNextQuestion()
   call search("(\\d\\+)")
