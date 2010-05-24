@@ -73,235 +73,97 @@ I will make the world beautiful.
 
 > andigo
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-		     Lesson 1.6: EDITING A FILE
+(11) Move to the beginning of each word in succession:
+No life ever grows great until it is focused, dedicated and disciplined.
 
-		    ** Use  :wq  to save a file and exit. **
+> wwwwwwwwwwww
 
-  !! NOTE: Before executing any of the steps below, read this entire lesson!!
+(12) Delete the following word:
+disambiguation
 
-  1. Exit this tutor as you did in lesson 1.2:  :q!
-     Or, if you have access to another terminal, do the following there.
+> dw
 
-  2. At the shell prompt type this command:  vim tutor <ENTER>
-     'vim' is the command to start the Vim editor, 'tutor' is the name of the
-     file you wish to edit.  Use a file that may be changed.
+(12) Remove the words that do not belong:
+Long trouble long ago, in a land wheel far far away...
 
-  3. Insert and delete text as you learned in the previous lessons.
+> wdwwwwwwwdw
+> wdw6wdw
 
-  4. Save the file with changes and exit Vim with:  :wq  <ENTER>
+(13) Delete from the '|' to the end of the line:
+The weakest of all |weak things is a virtue that has not been tested in the fire.
+~ Mark Twain
 
-  5. If you have quit vimtutor in step 1 restart the vimtutor and move down to
-     the following summary.
+> wwwwD
+> wwwwd$
+> 4wD
+> f|D
 
-  6. After reading the above steps and understanding them: do it.
-  
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-			       Lesson 1 SUMMARY
+(14) Move to the 'd' in the word 'word':
+I encourage you to move a word at a time.
 
+> eeeeee
+> /word/e
+> 6e
 
-  1. The cursor is moved using either the arrow keys or the hjkl keys.
-	 h (left)	j (down)       k (up)	    l (right)
+(15) Move to the 3rd word and then back to the beginning of the line:
+Seek not to follow in the footsteps of men of old; seek what they sought.
+~ Matsu Basho
 
-  2. To start Vim from the shell prompt type:  vim FILENAME <ENTER>
+> eee0
+> 3e0
 
-  3. To exit Vim type:	   <ESC>   :q!	 <ENTER>  to trash all changes.
-	     OR type:	   <ESC>   :wq	 <ENTER>  to save the changes.
+(16) Delete the first 4 words:
+Never interrupt your enemy when he is making a mistake.
+~ Napoleon Bonaparte
 
-  4. To delete the character at the cursor type:  x
+> d4w
+> 4dw
 
-  5. To insert or append text type:
-	 i   type inserted text   <ESC>		insert before the cursor
-	 A   type appended text   <ESC>         append after the line
+(17) Move to the 3rd word and then back one word, ending at the 'f' in force:
+Who overcomes by force, hath overcome but half his foe.
+~ John Milton
 
-NOTE: Pressing <ESC> will place you in Normal mode or will cancel
-      an unwanted and partially completed command.
+> wwwwb
 
-Now continue with Lesson 2.
+(18) Move to the 2nd word and then delete the line:
+We are what we repeatedly do. Excellence then, is not an act, but a habit.
+~ Aristotle
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-			Lesson 2.1: DELETION COMMANDS
+> wdd
+> w0D
 
+(19) Delete both lines:
+I fear not the man who has practiced 10,000 kicks once,
+but I fear the man who has practiced one kick 10,000 times.
+~ Bruce Lee
 
-		       ** Type  dw  to delete a word. **
+> d2d
+> 2dd
 
-  1. Press  <ESC>  to make sure you are in Normal mode.
+(20) Delete the UPPER CASE words:
+Never AB CDEF interrupt your GHIJKL MNOP QRS enemy when he TUVWXYZ is making a mistake.
+~ Napoleon Bonaparte
 
-  2. Move the cursor to the line below marked --->.
+> w2dwww3dwwwwdw
 
-  3. Move the cursor to the beginning of a word that needs to be deleted.
+(21) Delete every second word, then undo all changes to the line:
+A warrior may choose pacifism; others are condemned to it.
 
-  4. Type   dw	 to make the word disappear.
+> wdwwdwwwdwwdwwdwU
+> wdww.W.w.w.U
+> qqWdwq4@qU
 
-  NOTE: The letter  d  will appear on the last line of the screen as you type
-	it.  Vim is waiting for you to type  w .  If you see another character
-	than  d  you typed something wrong; press  <ESC>  and start over.
+(22) Delete the second word on each line, then undo both deletions:
+Begin at the beginning, the King said, gravely,
+and go on till you come to the end: then stop.
+~ Lewis Caroll
 
----> There are a some words fun that don't belong paper in this sentence.
+> wdwjbdwuu
 
-  5. Repeat steps 3 and 4 until the sentence is correct and go to Lesson 2.2.
+There are two rules for being successful in martial arts.
+Rule 1: Never tell others everything you know.
 
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-		      Lesson 2.2: MORE DELETION COMMANDS
-
-
-	   ** Type  d$	to delete to the end of the line. **
-
-  1. Press  <ESC>  to make sure you are in Normal mode.
-
-  2. Move the cursor to the line below marked --->.
-
-  3. Move the cursor to the end of the correct line (AFTER the first . ).
-
-  4. Type    d$    to delete to the end of the line.
-
----> Somebody typed the end of this line twice. end of this line twice.
-
-
-  5. Move on to Lesson 2.3 to understand what is happening.
-
-
-
-
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-		     Lesson 2.3: ON OPERATORS AND MOTIONS
-
-
-  Many commands that change text are made from an operator and a motion.
-  The format for a delete command with the  d  delete operator is as follows:
-
-  	d   motion
-
-  Where:
-    d      - is the delete operator.
-    motion - is what the operator will operate on (listed below).
-
-  A short list of motions:
-    w - until the start of the next word, EXCLUDING its first character.
-    e - to the end of the current word, INCLUDING the last character.
-    $ - to the end of the line, INCLUDING the last character.
-
-  Thus typing  de  will delete from the cursor to the end of the word.
-
-NOTE:  Pressing just the motion while in Normal mode without an operator will
-       move the cursor as specified.
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-		     Lesson 2.4: USING A COUNT FOR A MOTION
-
-
-   ** Typing a number before a motion repeats it that many times. **
-
-  1. Move the cursor to the start of the line marked ---> below.
-
-  2. Type  2w  to move the cursor two words forward.
-
-  3. Type  3e  to move the cursor to the end of the third word forward.
-
-  4. Type  0  (zero) to move to the start of the line.
-
-  5. Repeat steps 2 and 3 with different numbers.
-
----> This is just a line with words you can move around in.
-
-  6. Move on to Lesson 2.5.
-
-
-
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-		     Lesson 2.5: USING A COUNT TO DELETE MORE
-
-
-   ** Typing a number with an operator repeats it that many times. **
-
-  In the combination of the delete operator and a motion mentioned above you
-  insert a count before the motion to delete more:
-	 d   number   motion
-
-  1. Move the cursor to the first UPPER CASE word in the line marked --->.
-
-  2. Type  d2w  to delete the two UPPER CASE words
-
-  3. Repeat steps 1 and 2 with a different count to delete the consecutive
-     UPPER CASE words with one command
-
---->  this ABC DE line FGHI JK LMN OP of words is Q RS TUV cleaned up.
-
-
-
-
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-			 Lesson 2.6: OPERATING ON LINES
-
-
-		   ** Type  dd   to delete a whole line. **
-
-  Due to the frequency of whole line deletion, the designers of Vi decided
-  it would be easier to simply type two d's to delete a line.
-
-  1. Move the cursor to the second line in the phrase below.
-  2. Type  dd  to delete the line.
-  3. Now move to the fourth line.
-  4. Type   2dd   to delete two lines.
-
---->  1)  Roses are red,
---->  2)  Mud is fun,
---->  3)  Violets are blue,
---->  4)  I have a car,
---->  5)  Clocks tell time,
---->  6)  Sugar is sweet
---->  7)  And so are you.
-
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-			 Lesson 2.7: THE UNDO COMMAND
-
-
-   ** Press  u	to undo the last commands,   U  to fix a whole line. **
-
-  1. Move the cursor to the line below marked ---> and place it on the
-     first error.
-  2. Type  x  to delete the first unwanted character.
-  3. Now type  u  to undo the last command executed.
-  4. This time fix all the errors on the line using the  x  command.
-  5. Now type a capital  U  to return the line to its original state.
-  6. Now type  u  a few times to undo the  U  and preceding commands.
-  7. Now type CTRL-R (keeping CTRL key pressed while hitting R) a few times
-     to redo the commands (undo the undo's).
-
----> Fiix the errors oon thhis line and reeplace them witth undo.
-
-  8. These are very useful commands.  Now move on to the Lesson 2 Summary.
-
-
-
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-			       Lesson 2 SUMMARY
-
-
-  1. To delete from the cursor up to the next word type:    dw
-  2. To delete from the cursor to the end of a line type:    d$
-  3. To delete a whole line type:    dd
-
-  4. To repeat a motion prepend it with a number:   2w
-  5. The format for a change command is:
-               operator   [number]   motion
-     where:
-       operator - is what to do, such as  d  for delete
-       [number] - is an optional count to repeat the motion
-       motion   - moves over the text to operate on, such as  w (word),
-		  $ (to the end of line), etc.
-
-  6. To move to the start of the line use a zero:  0
-
-  7. To undo previous actions, type: 	       u  (lowercase u)
-     To undo all the changes on a line, type:  U  (capital U)
-     To undo the undo's, type:		       CTRL-R
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 			 Lesson 3.1: THE PUT COMMAND
