@@ -28,68 +28,61 @@ Pressing <ESC>:q! will discard any changes.
 |    Ready?  Begin!                                                           |
 +-----------------------------------------------------------------------------+
 
-(1)  Move the cursor down:
+(1) Follow the path from 'o' to 'x':
+o-|  x-----------|
+  |-| |-| |----| |
+ |--| | | |--| | |
+ |----| |----| |-|
 
 
-> j
+(2) Using 'l' and 'i' keys, insert the missing text in line 1 using line 2 as a guide:
+DlbraePrate
+Deliberate Practice
 
-(2) Move the cursor up:
- 
-
-> k
-
-(3) Move the cursor right, then left:
-  
-
-> lh
-
-! KataRandom(movement-along-a-path)
-
-(5) Delete the . in the following line:
-.
-
-> x
-
-! KataRandom(move-and-delete)
-
-(7) Insert the text 'welcome', and return to normal mode:
+> lielliillielllitlli lllliclliic
 
 
-> iwelcome
+(3) Using 'h' and 'a' keys, insert the missing text in line 1 using line 2 as a guide
+Repttion s Wrtwhie
+Repetition is Worthwhile
 
-(8) Insert the missing text in line 1 using line 2 as a guide:
-Exclene is; del prac is wa we.
-Excellence is our goal; deliberate practice is what we praise.
+< $
+> halhhhhahhhhaohhhhaihhhhhhaihhae
 
-> llliellillllicllllli our goallllllliiberatelllllliticellllllihllitlllli praise
 
-(9) Append 'kata' to the end of this line:
-The end of one kata is the beginning of another
+(4) Using 'A', append each parenthetical word to the end of its line:
+(not) Seek not
+(the) to follow in the
+(old;) footsteps of men of old;
+(sought.) seek what they sought.
+~ Matsu Basho
 
-> A kata
+> A notjA thejA old;jA sought.
 
-(10) Without moving the cursor, append 'ndigo' to the letter 'I':
+
+(5) Without moving the cursor, append 'ndigo' to the letter 'I':
 I will make the world beautiful.
 
 > andigo
 
-(11) Move to the beginning of each word in succession:
+(6) Move to the beginning of each word in succession:
+Excellence is our goal; deliberate practice is what we praise.
 No life ever grows great until it is focused, dedicated and disciplined.
 
 > wwwwwwwwwwww
 
-(12) Delete the following word:
+(7) Delete the following word:
 disambiguation
 
 > dw
 
-(12) Remove the words that do not belong:
+(8) Remove the words that do not belong:
 Long trouble long ago, in a land wheel far far away...
 
 > wdwwwwwwwdw
 > wdw6wdw
 
-(13) Delete from the '|' to the end of the line:
+(9) Delete from the '|' to the end of the line:
 The weakest of all |weak things is a virtue that has not been tested in the fire.
 ~ Mark Twain
 
@@ -98,41 +91,41 @@ The weakest of all |weak things is a virtue that has not been tested in the fire
 > 4wD
 > f|D
 
-(14) Move to the 'd' in the word 'word':
+(10) Move to the 'd' in the word 'word':
 I encourage you to move a word at a time.
 
 > eeeeee
 > /word/e
 > 6e
 
-(15) Move to the 3rd word and then back to the beginning of the line:
+(11) Move to the 3rd word and then back to the beginning of the line:
 Seek not to follow in the footsteps of men of old; seek what they sought.
 ~ Matsu Basho
 
 > eee0
 > 3e0
 
-(16) Delete the first 4 words:
+(12) Delete the first 4 words:
 Never interrupt your enemy when he is making a mistake.
 ~ Napoleon Bonaparte
 
 > d4w
 > 4dw
 
-(17) Move to the 3rd word and then back one word, ending at the 'f' in force:
+(13) Move to the 3rd word and then back one word, ending at the 'f' in force:
 Who overcomes by force, hath overcome but half his foe.
 ~ John Milton
 
 > wwwwb
 
-(18) Move to the 2nd word and then delete the line:
+(14) Move to the 2nd word and then delete the line:
 We are what we repeatedly do. Excellence then, is not an act, but a habit.
 ~ Aristotle
 
 > wdd
 > w0D
 
-(19) Delete both lines:
+(15) Delete both lines:
 I fear not the man who has practiced 10,000 kicks once,
 but I fear the man who has practiced one kick 10,000 times.
 ~ Bruce Lee
@@ -140,29 +133,38 @@ but I fear the man who has practiced one kick 10,000 times.
 > d2d
 > 2dd
 
-(20) Delete the UPPER CASE words:
+(16) Delete the UPPER CASE words:
 Never AB CDEF interrupt your GHIJKL MNOP QRS enemy when he TUVWXYZ is making a mistake.
 ~ Napoleon Bonaparte
 
 > w2dwww3dwwwwdw
 
-(21) Delete every second word, then undo all changes to the line:
+(17) Delete every second word, then undo all changes to the line:
 A warrior may choose pacifism; others are condemned to it.
 
 > wdwwdwwwdwwdwwdwU
 > wdww.W.w.w.U
 > qqWdwq4@qU
 
-(22) Delete the second word on each line, then undo both deletions:
+(18) Delete the second word on each line, then undo both deletions:
 Begin at the beginning, the King said, gravely,
 and go on till you come to the end: then stop.
 ~ Lewis Caroll
 
 > wdwjbdwuu
+> wdw0jwdw
+> wdw0jw.
+
+
+! KataRandom(movement-along-a-path)
+
+! KataRandom(move-and-delete)
+
 
 There are two rules for being successful in martial arts.
 Rule 1: Never tell others everything you know.
 
+The end of one kata is the beginning of another.
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
