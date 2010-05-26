@@ -36,6 +36,11 @@ function! s:NextQuestion()
   normal j
 endfunction
 
+function! s:NextQuestionWithPrep()
+  call s:NextQuestion()
+  call s:ExecutePreparation()
+endfunction
+
 function! s:PrevQuestion()
   call s:ThisQuestion()
   normal k
@@ -57,11 +62,40 @@ function! s:ThisAnswer()
   normal ll
 endfunction
 
+function! s:ThisPreparationLine()
+  call s:ThisQuestion()
+  let prepline = search("^<", "nW")
+  let nextqline = search("^(\\d\\+)", "nW")
+
+  if nextqline < 0
+    nextqline = search("$", "nW")
+  end
+
+  if prepline > 0 && prepline < nextqline
+    return prepline
+  else
+    return -1
+  endif
+endfunction
+
 function! s:ExecuteAnswer()
   call s:ThisAnswer()
   exe "normal \"ay$"
   call s:ThisInput()
   exe "normal @a"
+endfunction
+
+function! s:ExecutePreparation()
+  let prepline = s:ThisPreparationLine()
+  if prepline > 0
+    exe prepline + "G"
+    normal ll
+    exe "normal \"ay$"
+    call s:ThisInput()
+    exe "normal @a"
+  else
+    call s:ThisInput()
+  end
 endfunction
 
 " maps
@@ -77,9 +111,14 @@ endif
 nnoremap <unique> <buffer> <silent> <script> <Plug>GroupRenumber <SID>GroupRenumber
 nnoremap <SID>GroupRenumber ms:call <SID>GroupRenumber()<CR>`s
 
+if !hasmapto('<Plug>NextQuestionWithPrep')
+  nmap <unique> Q <Plug>NextQuestionWithPrep
+endif
+nnoremap <unique> <buffer> <silent> <script> <Plug>NextQuestionWithPrep <SID>NextQuestionWithPrep
+nnoremap <SID>NextQuestionWithPrep :call <SID>NextQuestionWithPrep()<CR>
+
 if !hasmapto('<Plug>NextQuestion')
   nmap <unique> <LocalLeader>kn <Plug>NextQuestion
-  nmap <unique> Q <Plug>NextQuestion
 endif
 nnoremap <unique> <buffer> <silent> <script> <Plug>NextQuestion <SID>NextQuestion
 nnoremap <SID>NextQuestion :call <SID>NextQuestion()<CR>
@@ -107,6 +146,12 @@ if !hasmapto('<Plug>ThisAnswer')
 endif
 nnoremap <unique> <buffer> <silent> <script> <Plug>ThisAnswer <SID>ThisAnswer
 nnoremap <SID>ThisAnswer :call <SID>ThisAnswer()<CR>
+
+if !hasmapto('<Plug>ExecutePreparation')
+  nmap <unique> <LocalLeader>kx <Plug>ExecutePreparation
+endif
+nnoremap <unique> <buffer> <silent> <script> <Plug>ExecutePreparation <SID>ExecutePreparation
+nnoremap <SID>ExecutePreparation :call <SID>ExecutePreparation()<CR>
 
 if !hasmapto('<Plug>ExecuteAnswer')
   nmap <unique> <LocalLeader>ke <Plug>ExecuteAnswer
