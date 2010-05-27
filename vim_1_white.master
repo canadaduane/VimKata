@@ -34,6 +34,7 @@ o-|  x-----------|
  |--| | | |--| | |
  |----| |----| |-|
 
+> lljlljhhhjlllllkklljjlllllkhhhkllllljjllkkkhhhhhhhhhhhh
 
 (2) Using 'l' and 'i' keys, insert the missing text in line 1 using line 2 as a guide:
 DlbraePrate
@@ -110,7 +111,7 @@ history meditate view disposition pare
 
 > iprewiprewiprewiprewipre
 
-(12) Delete the following capitalized words (including any connected punctuation):
+(12) Delete the following CAPITALIZED words (including any connected punctuation):
 NO life EVER grows great UNTIL IT is FOCUSED, DEDICATED AND disciplined.
 
 > dwwdwwwdwdwwdWdwdw
@@ -121,32 +122,31 @@ The weakest of all |weak things is a virtue that has not been tested in the fire
 
 > 4wD
 
-(14) Delete the following capitalized words (including any connected punctuation):
+(14) Delete the following CAPITALIZED words (including any connected punctuation):
 NEVER INTERRUPT YOUR ENEMY WHEN he is making a mistake.
 ~ Napoleon Bonaparte
 
 > d5w
 
-(15) Delete the following capitalized words (including any connected punctuation):
+(15) Delete the following CAPITALIZED words (including any connected punctuation):
 Never interrupt your enemy WHEN HE IS MAKING A MISTAKE.
 ~ Napoleon Bonaparte
 
 > 4wD
 
-(16) Move to the 2nd word and then delete the line:
+(16) Delete the entire line without moving the cursor:
 We are what we repeatedly do. Excellence then, is not an act, but a habit.
 ~ Aristotle
 
-> wdd
-> w0D
+< 6W
+> dd
 
-(17) Delete both lines:
+(17) Delete all three lines:
 I fear not the man who has practiced 10,000 kicks once,
 but I fear the man who has practiced one kick 10,000 times.
 ~ Bruce Lee
 
-> d2d
-> 2dd
+> d3d
 
 (18) Delete the UPPER CASE words:
 Never AB CDEF interrupt your GHIJKL MNOP QRS enemy when he TUVWXYZ is making a mistake.
@@ -157,14 +157,14 @@ Never AB CDEF interrupt your GHIJKL MNOP QRS enemy when he TUVWXYZ is making a m
 (19) Delete every second word, then undo all changes to the line:
 A warrior may choose pacifism; others are condemned to it.
 
-> wdwwdwwwdwwdwwdwU
+> wdwwdwWdwwdwwdwU
 
-(20) Delete the second word on each line, then undo both deletions:
-Begin at the beginning, the King said, gravely,
-and go on till you come to the end: then stop.
-~ Lewis Caroll
+(20) Delete every CAPITALIZED word, undo the deletions, then redo them all:
+Begin at THE beginning, the KING said, gravely,
+and go on till YOU come to the end: then stop.
+~ Lewis CAROLL
 
-> wdwjbdwuu
+> wwdwWWdw6Wdw8Wdwuuuu
 
 ! KataRandom(movement-along-a-path)
 
