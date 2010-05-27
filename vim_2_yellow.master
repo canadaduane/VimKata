@@ -1,0 +1,8 @@
+
+(1) Move the following line to the 'a' mark (mark has been created for you):
+I am moved.
+
+-- a --
+
+< 2jma2k
+> :m 'a

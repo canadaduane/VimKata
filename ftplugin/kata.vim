@@ -64,18 +64,8 @@ endfunction
 
 function! s:ThisPreparationLine()
   call s:ThisQuestion()
-  let prepline = search("^<", "nW")
-  let nextqline = search("^(\\d\\+)", "nW")
-
-  if nextqline < 0
-    nextqline = search("$", "nW")
-  end
-
-  if prepline > 0 && prepline < nextqline
-    return prepline
-  else
-    return -1
-  endif
+  let prepline = search("^<", "nW", search("^(\\d\\+)", "nW"))
+  return prepline
 endfunction
 
 function! s:ExecuteAnswer()
