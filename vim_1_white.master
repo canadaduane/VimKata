@@ -43,89 +43,104 @@ Deliberate Practice
 
 
 (3) Using 'h' and 'a' keys, insert the missing text in line 1 using line 2 as a guide
-Repttion s Wrtwhie
+Repttion s Wrtwhil
 Repetition is Worthwhile
 
 < $
-> halhhhhahhhhaohhhhaihhhhhhaihhae
+> aehhhhhahhhhaohhhhaihhhhhhaihhae
 
+(4) Follow the path from 'o' to 'x':
+|--------x
+| |----------|
+| | |------| |
+| | | |--| | |
+| | | |  | | |
+| | |-|  o | |
+| |        |-|
+|-|
 
-(4) Using 'A', append each parenthetical word to the end of its line:
-(not) Seek not
-(the) to follow in the
-(old;) footsteps of men of old;
-(sought.) seek what they sought.
+< /o:noh
+> kkhhhjjhhkkkllllllljjjjllkkkkkhhhhhhhhhhhjjjjjjhhkkkkkkklllllllll
+
+(5) Using 'A', append each parenthetical word to the end of its line:
+(not) Seek
+(the) to follow in
+(old;) footsteps of men of
+(sought.) seek what they
 ~ Matsu Basho
 
 > A notjA thejA old;jA sought.
 
+(6) Using 'l' and 'i' keys, insert the missing text in line 1 using line 2 as a guide:
+A atais Wort a Tousad Eis
+A Kata is Worth a Thousand Edits
 
-(5) Without moving the cursor, append 'ndigo' to the letter 'I':
-I will make the world beautiful.
+> lliKlllli llllllllihlllllihlllllinllllidllit
 
-> andigo
+(7) Using 'h' and 'i' keys, insert the missing text in line 1 using line 2 as a guide
+Kep t Simle Smart
+Keep It Simple Smarty
 
-(6) Move to the beginning of each word in succession:
-Excellence is our goal; deliberate practice is what we praise.
-No life ever grows great until it is focused, dedicated and disciplined.
+< $
+> ithhhhhhhiphhhhhiIhhie
 
-> wwwwwwwwwwww
+(8) Follow the words in alphabetical order (touch each FIRST letter):
+Alpha  Bravo   Charlie  Mike   November
+       Echo    Delta    Lima   Kilo
+       Foxtrot          India  Juliet
+       Golf             Hotel
 
-(7) Delete the following word:
-disambiguation
+> wwjbjjwkwkbkw
 
-> dw
+(9) Follow the words in alphabetical order (touch each FIRST letter):
+Foxtrot,  "Golf"   Hotel...  India
+Echo      Bravo?   Alpha     Juliet
+Delta!    Charlie            Lima
 
-(8) Remove the words that do not belong:
-Long trouble long ago, in a land wheel far far away...
+< /Alpha:noh
+> BjBkkWWWjj
 
-> wdwwwwwwwdw
-> wdw6wdw
+(10) Using 'e' and 'a', pluralize the following words:
+Canadian Shark Deliver Wedding Discover
 
-(9) Delete from the '|' to the end of the line:
+> easeaseaseaseas
+
+(11) Using 'w' and 'i', prefix each word with 'pre':
+history meditate view disposition pare
+
+> iprewiprewiprewiprewipre
+
+(12) Delete the following capitalized words (including any connected punctuation):
+NO life EVER grows great UNTIL IT is FOCUSED, DEDICATED AND disciplined.
+
+> dwwdwwwdwdwwdWdwdw
+
+(13) Delete from the '|' to the end of the line:
 The weakest of all |weak things is a virtue that has not been tested in the fire.
 ~ Mark Twain
 
-> wwwwD
-> wwwwd$
 > 4wD
-> f|D
 
-(10) Move to the 'd' in the word 'word':
-I encourage you to move a word at a time.
-
-> eeeeee
-> /word/e
-> 6e
-
-(11) Move to the 3rd word and then back to the beginning of the line:
-Seek not to follow in the footsteps of men of old; seek what they sought.
-~ Matsu Basho
-
-> eee0
-> 3e0
-
-(12) Delete the first 4 words:
-Never interrupt your enemy when he is making a mistake.
+(14) Delete the following capitalized words (including any connected punctuation):
+NEVER INTERRUPT YOUR ENEMY WHEN he is making a mistake.
 ~ Napoleon Bonaparte
 
-> d4w
-> 4dw
+> d5w
 
-(13) Move to the 3rd word and then back one word, ending at the 'f' in force:
-Who overcomes by force, hath overcome but half his foe.
-~ John Milton
+(15) Delete the following capitalized words (including any connected punctuation):
+Never interrupt your enemy WHEN HE IS MAKING A MISTAKE.
+~ Napoleon Bonaparte
 
-> wwwwb
+> 4wD
 
-(14) Move to the 2nd word and then delete the line:
+(16) Move to the 2nd word and then delete the line:
 We are what we repeatedly do. Excellence then, is not an act, but a habit.
 ~ Aristotle
 
 > wdd
 > w0D
 
-(15) Delete both lines:
+(17) Delete both lines:
 I fear not the man who has practiced 10,000 kicks once,
 but I fear the man who has practiced one kick 10,000 times.
 ~ Bruce Lee
@@ -133,33 +148,34 @@ but I fear the man who has practiced one kick 10,000 times.
 > d2d
 > 2dd
 
-(16) Delete the UPPER CASE words:
+(18) Delete the UPPER CASE words:
 Never AB CDEF interrupt your GHIJKL MNOP QRS enemy when he TUVWXYZ is making a mistake.
 ~ Napoleon Bonaparte
 
 > w2dwww3dwwwwdw
 
-(17) Delete every second word, then undo all changes to the line:
+(19) Delete every second word, then undo all changes to the line:
 A warrior may choose pacifism; others are condemned to it.
 
 > wdwwdwwwdwwdwwdwU
-> wdww.W.w.w.U
-> qqWdwq4@qU
 
-(18) Delete the second word on each line, then undo both deletions:
+(20) Delete the second word on each line, then undo both deletions:
 Begin at the beginning, the King said, gravely,
 and go on till you come to the end: then stop.
 ~ Lewis Caroll
 
 > wdwjbdwuu
-> wdw0jwdw
-> wdw0jw.
-
 
 ! KataRandom(movement-along-a-path)
 
 ! KataRandom(move-and-delete)
 
+
+Who overcomes by force, hath overcome but half his foe.
+~ John Milton
+
+Seek not to follow in the footsteps of men of old; seek what they sought.
+~ Matsu Basho
 
 There are two rules for being successful in martial arts.
 Rule 1: Never tell others everything you know.
@@ -167,6 +183,7 @@ Rule 1: Never tell others everything you know.
 The end of one kata is the beginning of another.
 
 
+Excellence is our goal; deliberate practice is what we praise.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 			 Lesson 3.1: THE PUT COMMAND
 
