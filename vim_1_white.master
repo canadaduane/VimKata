@@ -28,7 +28,7 @@ Pressing <ESC>:q! will discard any changes.
 |    Ready?  Begin!                                                           |
 +-----------------------------------------------------------------------------+
 
-(1) Follow the path from 'o' to 'x':
+(#) Follow the path from 'o' to 'x':
 o-|  x-----------|
   |-| |-| |----| |
  |--| | | |--| | |
@@ -36,21 +36,21 @@ o-|  x-----------|
 
 > lljlljhhhjlllllkklljjlllllkhhhkllllljjllkkkhhhhhhhhhhhh
 
-(2) Using 'l' and 'i' keys, insert the missing text in line 1 using line 2 as a guide:
+(#) Using 'l' and 'i' keys, insert the missing text in line 1 using line 2 as a guide:
 DlbraePrate
 Deliberate Practice
 
 > lielliillielllitlli lllliclliic
 
 
-(3) Using 'h' and 'a' keys, insert the missing text in line 1 using line 2 as a guide
+(#) Using 'h' and 'a' keys, insert the missing text in line 1 using line 2 as a guide
 Repttion s Wrtwhil
 Repetition is Worthwhile
 
 < $
 > aehhhhhahhhhaohhhhaihhhhhhaihhae
 
-(4) Follow the path from 'o' to 'x':
+(#) Follow the path from 'o' to 'x':
 |--------x
 | |----------|
 | | |------| |
@@ -63,7 +63,7 @@ Repetition is Worthwhile
 < /o:noh
 > kkhhhjjhhkkkllllllljjjjllkkkkkhhhhhhhhhhhjjjjjjhhkkkkkkklllllllll
 
-(5) Using 'A', append each parenthetical word to the end of its line:
+(#) Using 'A', append each parenthetical word to the end of its line:
 (not) Seek
 (the) to follow in
 (old;) footsteps of men of
@@ -72,20 +72,20 @@ Repetition is Worthwhile
 
 > A notjA thejA old;jA sought.
 
-(6) Using 'l' and 'i' keys, insert the missing text in line 1 using line 2 as a guide:
+(#) Using 'l' and 'i' keys, insert the missing text in line 1 using line 2 as a guide:
 A atais Wort a Tousad Eis
 A Kata is Worth a Thousand Edits
 
 > lliKlllli llllllllihlllllihlllllinllllidllit
 
-(7) Using 'h' and 'i' keys, insert the missing text in line 1 using line 2 as a guide
+(#) Using 'h' and 'i' keys, insert the missing text in line 1 using line 2 as a guide
 Kep t Simle Smart
 Keep It Simple Smarty
 
 < $
 > ithhhhhhhiphhhhhiIhhie
 
-(8) Follow the words in alphabetical order (touch each FIRST letter):
+(#) Follow the words in alphabetical order (touch each FIRST letter):
 Alpha  Bravo   Charlie  Mike   November
        Echo    Delta    Lima   Kilo
        Foxtrot          India  Juliet
@@ -93,7 +93,7 @@ Alpha  Bravo   Charlie  Mike   November
 
 > wwjbjjwkwkbkw
 
-(9) Follow the words in alphabetical order (touch each FIRST letter):
+(#) Follow the words in alphabetical order (touch each FIRST letter):
 Foxtrot,  "Golf"   Hotel...  India
 Echo      Bravo?   Alpha     Juliet
 Delta!    Charlie            Lima
@@ -101,78 +101,109 @@ Delta!    Charlie            Lima
 < /Alpha:noh
 > BjBkkWWWjj
 
-(10) Using 'e' and 'a', pluralize the following words:
+(#) Using 'e' and 'a', pluralize the following words:
 Canadian Shark Deliver Wedding Discover
 
 > easeaseaseaseas
 
-(11) Using 'w' and 'i', prefix each word with 'pre':
+(#) Using 'w' and 'i', prefix each word with 'pre':
 history meditate view disposition pare
 
 > iprewiprewiprewiprewipre
 
-(12) Delete the following CAPITALIZED words (including any connected punctuation):
+(#) Delete the following CAPITALIZED words (including any connected punctuation):
 NO life EVER grows great UNTIL IT is FOCUSED, DEDICATED AND disciplined.
 
 > dwwdwwwdwdwwdWdwdw
 
-(13) Delete from the '|' to the end of the line:
+(#) Delete from the '|' to the end of the line:
 The weakest of all |weak things is a virtue that has not been tested in the fire.
 ~ Mark Twain
 
 > 4wD
 
-(14) Delete the following CAPITALIZED words (including any connected punctuation):
+(#) Delete the following CAPITALIZED words (including any connected punctuation):
 NEVER INTERRUPT YOUR ENEMY WHEN he is making a mistake.
 ~ Napoleon Bonaparte
 
 > d5w
 
-(15) Delete the following CAPITALIZED words (including any connected punctuation):
+(#) Delete the following CAPITALIZED words (including any connected punctuation):
 Never interrupt your enemy WHEN HE IS MAKING A MISTAKE.
 ~ Napoleon Bonaparte
 
 > 4wD
 
-(16) Delete the entire line without moving the cursor:
+(#) Delete the entire line without moving the cursor:
 We are what we repeatedly do. Excellence then, is not an act, but a habit.
 ~ Aristotle
 
 < 6W
 > dd
 
-(17) Delete all three lines:
+(#) Delete all three lines:
 I fear not the man who has practiced 10,000 kicks once,
 but I fear the man who has practiced one kick 10,000 times.
 ~ Bruce Lee
 
 > d3d
 
-(18) Delete the UPPER CASE words:
+(#) Delete the UPPER CASE words:
 Never AB CDEF interrupt your GHIJKL MNOP QRS enemy when he TUVWXYZ is making a mistake.
 ~ Napoleon Bonaparte
 
 > w2dwww3dwwwwdw
 
-(19) Delete every second word, then undo all changes to the line:
+(#) Delete every second word, then undo all changes to the line:
 A warrior may choose pacifism; others are condemned to it.
 
 > wdwwdwWdwwdwwdwU
 
-(20) Delete every CAPITALIZED word, undo the deletions, then redo them all:
+(#) Delete every CAPITALIZED word, undo the deletions, then redo them all:
 Begin at THE beginning, the KING said, gravely,
 and go on till YOU come to the end: then stop.
 ~ Lewis CAROLL
 
 > wwdwWWdw6Wdw8Wdwuuuu
 
-(21) Delete the middle line and put a copy of it above and below the other two:
-Quotable:
-Seek not to follow in the footsteps of men of old; seek what they sought.
-~ Matsu Basho
+(#) Delete the middle line and put a copy of it above and below the other two:
 
-< j
-> ddpkkP
+(
+Middle Line
+)
+
+(
+Do it again
+)
+
+(
+Seek not to follow in the footsteps of men of old; seek what they sought.
+)
+
+< 2j
+> ddpkkP}jjddpkkP}jjddpkkP
+
+(#) Using dd and p, put the following lines in the correct order:
+3. and dissolve the principle. 
+7. ~ Bruce Lee
+1. Learn the principle,
+4. In short, enter a mold without being caged in it. 
+2. abide by the principle,
+6. Learn, master and achieve!
+5. Obey the principle without being bound by it. 
+
+> ddjpkkdd5jp3kddkkPjjjddp
+
+(#) Using !sort, put the following lines in the correct order:
+3. and dissolve the principle. 
+7. ~ Bruce Lee
+1. Learn the principle,
+4. In short, enter a mold without being caged in it. 
+2. abide by the principle,
+6. Learn, master and achieve!
+5. Obey the principle without being bound by it. 
+
+> V6j:!sort
 
 +-----------------------------------------------------------------------------+
 |    Sparring Time!                                                           |
@@ -185,43 +216,6 @@ stretch your developing muscle memory.  Go as fast as you can!
 ! KataRandom(movement-along-a-path)
 
 ! KataRandom(move-and-delete)
-
-+-----------------------------------------------------------------------------+
-|    Unused Quotes                                                            |
-+-----------------------------------------------------------------------------+
-
-Who overcomes by force, hath overcome but half his foe.
-~ John Milton
-
-
-There are two rules for being successful in martial arts.
-Rule 1: Never tell others everything you know.
-
-The end of one kata is the beginning of another.
-
-Excellence is our goal; deliberate practice is what we praise.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-			 Lesson 3.1: THE PUT COMMAND
-
-
-       ** Type	p  to put previously deleted text after the cursor. **
-
-  1. Move the cursor to the first ---> line below.
-
-  2. Type  dd  to delete the line and store it in a Vim register.
-
-  3. Move the cursor to the c) line, ABOVE where the deleted line should go.
-
-  4. Type   p   to put the line below the cursor.
-
-  5. Repeat steps 2 through 4 to put all the lines in correct order.
-
----> d) Can you learn too?
----> b) Violets are blue,
----> c) Intelligence is learned,
----> a) Roses are red,
-
-
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		       Lesson 3.2: THE REPLACE COMMAND
