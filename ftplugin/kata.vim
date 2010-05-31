@@ -3,10 +3,10 @@
 " Maintainer:		Duane Johnson
 
 " Only do this when not done yet for this buffer
-" if exists("b:did_ftplugin")
-"   finish
-" endif
-" let b:did_ftplugin = 1
+if exists("b:did_ftplugin")
+  finish
+endif
+let b:did_ftplugin = 1
 
 " preserve user's options
 let s:save_cpo = &cpo
@@ -14,8 +14,6 @@ set cpo&vim
 
 setlocal commentstring=#%s foldmethod=marker
 setlocal nospell nohlsearch
-
-setlocal statusline=Time:\ \ Test
 
 function! s:Renumber() range
   let b:k_count = 1
@@ -39,11 +37,8 @@ function! s:NextQuestion()
 endfunction
 
 function! s:NextQuestionWithPrep()
-  " call s:StopRecording()
   call s:NextQuestion()
   call s:ExecutePreparation()
-  " call s:ClockInit("l")
-  " call s:StartRecording()
 endfunction
 
 function! s:PrevQuestion()
@@ -92,53 +87,6 @@ function! s:ExecutePreparation()
     call s:ThisInput()
   end
 endfunction
-
-" function! s:ClockInit(scope)
-"   let l:clock = (strftime("%I") * 3600) + (strftime("%M") * 60) + (strftime("%S"))
-"   if a:scope == "g"
-"     let s:kata_clock = l:clock
-"   elseif a:scope == "l"
-"     let s:question_clock = l:clock
-"   endif
-" endfunction
-
-" function! s:ClockDiff(scope)
-"   let l:now = (strftime("%I") * 3600) + (strftime("%M") * 60) + (strftime("%S"))
-"   if a:scope == "g"
-"     return (l:now - s:kata_clock)
-"   elseif a:scope == "l"
-"     return (l:now - s:question_clock)
-"   end
-" endfunction
-
-" function! s:StartRecording()
-"   exe "normal qY"
-" endfunction
-
-" function! s:StopRecording()
-"   exe "normal q"
-" endfunction
-
-" function! s:ClearRecording()
-"   let @y = ""
-" endfunction
-
-" function! CalcCPM()
-"   let l:diff = ClockDiff()
-"   if l:diff <= 0
-"     return 0
-"   else
-"     let l:cpm = strlen(@y) * 60 / l:diff
-"     return l:cpm
-"   endif
-" endfunction
-
-setlocal updatetime=1000
-autocmd! CursorHold * call Timer() 
-" autocmd! CursorHoldI * call Timer()
-function! Timer() 
-  call feedkeys("f\e") 
-endfunction 
 
 " maps
 if !hasmapto('<Plug>Renumber')
@@ -201,11 +149,6 @@ endif
 nnoremap <unique> <buffer> <silent> <script> <Plug>ExecuteAnswer <SID>ExecuteAnswer
 nnoremap <SID>ExecuteAnswer :call <SID>ExecuteAnswer()<CR>
 
-" call s:ClockInit("g")
-" call s:ClearRecording()
-" call s:StartRecording()
-
 " restore user's options
 let &cpo = s:save_cpo
-
 " vim:set sw=2:
