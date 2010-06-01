@@ -1,0 +1,43 @@
+(#) Using :m and a mark, move odd lines to below the dashed line:
+1. Create a mark by using 'm' and a letter such as 'a'
+2. Move the cursor to a line that needs to be moved
+3. Use :m'a to send the line to the marked line
+-----
+
+> /-ma3k:m'a2k:m'a
+
+(#) Using :m, move odd` lines to below the 'a' mark and even lines to below the 'b' mark:
+1. Try not to pause between keystrokes
+2. Aim for consistent, steady normal mode typing
+3. With practice, normal mode can be as fast as insertion mode.
+
+-- a mark --
+-- b mark --
+
+< /a markma/b markmb:noh5k0
+> :m'a5k:m'b3k:m'a
+
+(#) Using :m, a mark, and visual mode, move the following two lines to below the dashed line:
+Who overcomes by force, hath overcome but half his foe.
+~ John Milton
+-----
+
+> 2jma2kVj:m'a
+
+(#) Each of the following lines has been marked.  Using ]' and [', navigate to the 5th, 1st, then 3rd mark:
+This line has been marked with an 'a'
+This line has been marked with a 'b'
+This line has been marked with a 'c'
+This line has been marked with a 'd'
+This line has been marked with an 'e'
+
+< majmbjmcjmdjme4k
+> 5]'2['2[' 
+
+(#) Using :pu, move the capitalized words below the 'a' mark:
+There are two RULES for being SUCCESSFUL in martial arts.
+Rule 1: Never tell others EVERYTHING you know.
+-- a mark --
+
+< /-ma2k/[A-Z]\{2,}
+> yw:'apuNNyw:'apuNyw:'apu
