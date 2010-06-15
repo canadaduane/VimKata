@@ -111,6 +111,11 @@ history meditate view disposition pare
 
 > iprewiprewiprewiprewipre
 
+(#) Using :s, prefix each word with 'pre':
+history meditate view disposition pare
+
+> :s/\>/pre/g
+
 (#) Delete the following CAPITALIZED words (including any connected punctuation):
 NO life EVER grows great UNTIL IT is FOCUSED, DEDICATED AND disciplined.
 
@@ -205,6 +210,67 @@ Seek not to follow in the footsteps of men of old; seek what they sought.
 
 > V6j:!sort
 
+(#) Using 'r', correct the following typos and spelling mistakes:
+Giwe piople a chamce to meke a dIfferense in the worlt.
+
+> llrvllllrelllllllllllrnllllllllralllllllrilllllllrcllllllllllllllrd
+
+(#) Using 'r', follow the path and fill in the missing numbers:
+1-2    -7-8 7-8- 
+  |   |   | |
+  3- -5      
+          | |
+6- -4- -2-1 5
+|           |
+ -8-9-1- -3- 
+
+> lljjllr4llkkr6lllljjr9jjhhhhr3hhhhr5hhjjr7llllllllr2llllr4kkkkr6kkllllr9
+
+(#) Using 'c' combinations, change the CAPITALIZED words to the word in parentheses:
+a CHIMPANZEE in the hand is worth two in the bush
+(bird)
+
+keep your STOMACH in the present
+(heart)
+
+and your NOSE in the future
+(eye) 
+
+> wcwbirdjjjwcwheartjjjbcweye
+
+
+(#) Using 'C', change the CAPITALIZED words up the end of the line:
+excellence is our INHERENT RIGHT
+(goal) 
+
+deliberate practice is what we WATCH OTHER PEOPLE DO
+(praise) 
+
+we are not our COLLECTION OF TOYS
+(thoughts) 
+
+may all beings be free from the causes of THOUGHTLESS BEHAVIOR
+(suffering)
+
+> wwwCgoaljjjwwwCpraisejjjbbbCthoughtsjjjwwwwwCsuffering
+
+
+(#) Using 'c' and 't', change the CAPITALIZED words up to a certain character:
+may you live a REMARKABLY OSTENTATIOUS, healthy life
+(long) 
+
+if dict["WORD OR GROUP OF WORDS"] == "definition"
+(phrase)
+
+education is a WILDLY POPULAR EXPERIENCE, not an outcome
+(process)
+
+with (CRAZY LONG VARIABLE) do
+(i)
+
+> wwwwct,longjjjbbbct"phrasejjjwct,processjjjbbbct)i
+
+
 +-----------------------------------------------------------------------------+
 |    Sparring Time!                                                           |
 +-----------------------------------------------------------------------------+
@@ -217,49 +283,6 @@ stretch your developing muscle memory.  Go as fast as you can!
 
 ! KataRandom(move-and-delete)
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-		       Lesson 3.2: THE REPLACE COMMAND
-
-
-       ** Type  rx  to replace the character at the cursor with  x . **
-
-  1. Move the cursor to the first line below marked --->.
-
-  2. Move the cursor so that it is on top of the first error.
-
-  3. Type   r	and then the character which should be there.
-
-  4. Repeat steps 2 and 3 until the first line is equal to the second one.
-
---->  Whan this lime was tuoed in, someone presswd some wrojg keys!
---->  When this line was typed in, someone pressed some wrong keys!
-
-  5. Now move on to Lesson 3.3.
-
-NOTE: Remember that you should be learning by doing, not memorization.
-
-
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-			Lesson 3.3: THE CHANGE OPERATOR
-
-
-	   ** To change until the end of a word, type  ce . **
-
-  1. Move the cursor to the first line below marked --->.
-
-  2. Place the cursor on the  u  in  lubw.
-
-  3. Type  ce  and the correct word (in this case, type  ine ).
-
-  4. Press <ESC> and move to the next character that needs to be changed.
-
-  5. Repeat steps 3 and 4 until the first sentence is the same as the second.
-
----> This lubw has a few wptfd that mrrf changing usf the change operator.
----> This line has a few words that need changing using the change operator.
-
-Notice that  ce  deletes the word and places you in Insert mode.
 
 
 
