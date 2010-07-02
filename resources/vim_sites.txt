@@ -21,6 +21,7 @@ http://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut
 
 == Tutorials ==
 http://blog.smr.co.in/linux/advanced-vim-tutorial/
+http://www.networkcomputing.com/unixworld/tutorial/009/009.part1.html
 
 == Scripting ==
 http://www.ibm.com/developerworks/linux/library/l-vim-script-1/index.html
@@ -35,3 +36,6 @@ http://www.catonmat.net/blog/vim-plugins-surround-vim
 http://linuxgazette.net/152/srinivasan.html
 http://www.derekwyatt.org/vim/vim-tutorial-videos/vim-advanced-tutorial-videos/
 http://www.eng.hawaii.edu/Tutor/vi.html
+
+== Writing Plugins ==
+http://items.sjbach.com/97/writing-a-vim-plugin
