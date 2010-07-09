@@ -5,8 +5,18 @@ correctly configuring a new Vim instance and outlines a progressive set of
 topics for the enthusiastic newcomer to study and practise.
 
 ==============================================================================
+The Vim Learning Path ~
+
+|lv_B|		Beginner
+|lv_I|		Intermediate
+|lv_M|		Moderate
+|lv_A|		Advanced
+==============================================================================
                                                 *lv_B* *learnvim-Beginner*
-COMPETENCIES ~
+
+BEGINNER TOPICS ~
+
+Competencies ~
 
 On completing this section, you will:
 
@@ -21,6 +31,8 @@ On completing this section, you will:
 		customise its interface.
 
 |lv_B_V|	Have created your own vimrc and gvimrc configuration files.
+
+------------------------------------------------------------------------------
 
                                             *lv_B_I* *learnvim-Using-Help*
 USING HELP ~
@@ -180,8 +192,8 @@ $HOME/.vimrc		Personal configuration file for both terminal and GUI
 			Vim.  You should create your own $HOME/.vimrc file to
 			enable certain essential features, give sane values to
 			important options and customise Vim to your
-			preferrences.  See |learnvim-vimrc| below for an
-			anotated example .vimrc file you can use to get
+			preferences.  See |learnvim-vimrc| below for an
+			annotated example .vimrc file you can use to get
 			started.
 
 $HOME/.gvimrc		Personal configuration file for GUI Vim.  You should
@@ -189,7 +201,7 @@ $HOME/.gvimrc		Personal configuration file for GUI Vim.  You should
 			reasons as with the .vimrc file.  The $HOME/.gvimrc
 			file is also used to store GUI-specific settings like
 			your GUI colorscheme, font and menu & toolbar options.
-			See |learnvim-gvimrc| for an anotated example .gvimrc
+			See |learnvim-gvimrc| for an annotated example .gvimrc
 			file you can use to get started.
 
 ------------------------------------------------------------------------------
@@ -212,11 +224,66 @@ To search for options in Vim, always remember to use a single quote ( ' )
 character at the start of the option name to make sure your search doesn't
 clash with other entries in the help system. E.g.   :help 'exp   will find the
 'expandtab' option, but   :help exp   will find the |expression| evaluation
-file.
+entry.
+
+VIM OPTIONS BROWSER ~
 
 Use the |:options| command to show an interactive window of all Vim's settings
 including their current values and a brief description, grouped by function.
 
+------------------------------------------------------------------------------
+Recipe: Using the Options Browser to search for and change a Vim setting ~
+
+Problem: ~
+
+You want to change the bahaviour of something in Vim (like the tab & indent
+settings, or how the Toolbar is displayed in the GUI), but you don't know the
+option name and searching the help system doesn't appeal to you.
+
+Solution: ~
+
+For tabs and indents:
+>
+ 	:options
+<
+Scroll down the Table of Contents and press Enter on the '15 tabs and
+indenting' line. This will jump you to the set of options controlling how Vim
+manages indentation.
+
+Likewise, for the GUI Toolbar problem:
+>
+ 	:options
+<
+Scroll down or search for GUI (/GUI) and press Enter on the '10 GUI' line.
+
+Comments: ~
+
+Changing a value on any of the 'set' lines and pressing Enter will update your
+current settings. Add the 'set' line to your ~/.vimrc file (see
+|learnvim-vimrc| below) to make the change permanent. Actually, you should
+clean up the set line by removing the initial, unset version of the option
+before adding it to your ~/.vimrc file.
+
+Example: ~
+
+Say you're browsing the options and decide that you want to enable 'smarttab'.
+You see the line:
+>
+ 	set nosta	sta
+<
+If you press Enter on that line then you will enable smarttabs. Copying that
+line to your ~/.vimrc file will work, but it's unnecessary and unsightly to
+have the option turned off and then on like that. So, when adding this to your
+~/.vimrc, change the line like this:
+>
+ 	set sta
+<
+Actually, it is a good practice to use the full name of an option so that when
+you come back to your ~/.vimrc file in six months time you will be able to
+understand what the setting means. So, change that line to:
+>
+ 	set smarttab
+<
 ------------------------------------------------------------------------------
                                                  *lv_B_V* *learnvim-vimrc*
 MAKING YOUR PERSONAL CONFIGURATION PERSISTENT ~
@@ -225,7 +292,7 @@ Your Own vimrc File ~
 
 Put this in your $HOME/.vimrc :
 >
-        set nocompatible               " NEVER change this! Use Vim mode, not vi mode.
+	set nocompatible               " NEVER change this! Use Vim mode, not vi mode.
 	filetype plugin indent on      " Enable automatic settings based on file type
 	syntax on                      " Enable color syntax highlighting
 
@@ -246,14 +313,14 @@ Put this in your $HOME/.vimrc :
 	set smartcase                  " ...except when using capital letters
 	set incsearch                  " Incremental search
 
-        " Insert (Edit) Options:
+	" Insert (Edit) Options:
 	set backspace=indent,eol,start " Better handling of backspace key
 	set autoindent                 " Sane indenting when filetype not recognised
 	set nostartofline              " Emulate typical editor navigation behaviour
 	set nopaste                    " Start in normal (non-paste) mode
 	set pastetoggle=<f11>          " Use <F11> to toggle between 'paste' and 'nopaste'
 
-        " Status / Command Line Options:
+	" Status / Command Line Options:
 	set wildmenu                   " Better commandline completion
 	set wildmode=longest:full,full " Expand match on first Tab complete
 	set showcmd                    " Show (partial) command in status line.
@@ -262,7 +329,7 @@ Put this in your $HOME/.vimrc :
 	" Show detailed information in status line
 	set statusline=%f%m%r%h%w\ [%n:%{&ff}/%Y]%=[0x\%04.4B][%03v][%p%%\ line\ %l\ of\ %L]
 
-        " Interface Options:
+	" Interface Options:
 	set number                     " Display line numbers at left of screen
 	set visualbell                 " Flash the screen instead of beeping on errors
 	set t_vb=                      " And then disable even the flashing
@@ -270,7 +337,7 @@ Put this in your $HOME/.vimrc :
 	" Quickly time out on keycodes, but never time out on mappings
 	set notimeout ttimeout ttimeoutlen=200
 
-        " Indentation Options:
+	" Indentation Options:
 	set tabstop=8                  " NEVER change this!
 	" Change the '2' value below to your preferred indentation level
 	set shiftwidth=softtabstop=2   " Number of spaces for each indent level
@@ -301,6 +368,20 @@ Put this in your $HOME/.vimrc :
 	" Toggle search highlighting
 	nnoremap <C-Bslash>       :set hls!<bar>:set hls?<CR>
 	inoremap <C-Bslash>       <Esc>:set hls!<bar>:set hls?<CR>a
+
+	""""""""""""""""
+	" Auto commands
+	""""""""""""""""
+	"
+	if has("autocmd")
+	  augroup filetype
+	    autocmd!              " Remove ALL autocommands for the current group.
+
+	    " Jump to last-known-position when editing files
+	    " Note: The | character is used in Vim as a command separator (like ; in C)
+	    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+	  augroup END
+	endif
 <
 Additional Options to Investigate ~
 
@@ -339,9 +420,109 @@ Additional Options to Investigate ~
 - 'colorscheme'	If you want to have the GUI use a different scheme to terminal
 		Vim.
 
-- 'guifont'	Font (or list of fonts to try) to use in the GUI.
+- 'guifont'	Font (or list of fonts to try) to use in the GUI. See the tip
+  below about setting your guifont.
 
 - 'guioptions'	Control which components and options of the GUI to use.
+
+==============================================================================
+                                            *lv_I* *learnvim-Intermediate*
+INTERMEDIATE TOPICS ~
+
+Competencies ~
+
+On completing this section, you will:
+
+|lv_I_I|	Be able to ...
+
+------------------------------------------------------------------------------
+
+Intermediate
+------------
+motion.txt (essential reading at this level)
+	v/foo<CR>x is definitely easier than ma/foo<CR>d`a
+buffers (:ls, :b #, :b name, bn, bp, ctrl-6, etc)
+windows (:only, c-w et al)
+tags
+:h ins-completion
+the gx commands
+
+:set paste and :set pastetoggle
+or with :set mouse=a you can middle-click to paste without worrying about :set paste / nopaste / pastetoggle
+Note: You need a vim compiled with X11 for access to the clipboard (echo has('X11')) will show 1 if you do.
+
+Return to where you last jumped from with `` or ''. `` is line+character, '' is line only. :help mark-motions
+
+Use |=| to reformat source code.
+
+Use |:retab| to change between tabs and spaces.
+
+Use abbreviations
+
+==============================================================================
+                                                *lv_M* *learnvim-Moderate*
+MODERATE TOPICS ~
+
+Competencies ~
+
+On completing this section, you will:
+
+|lv_M_I|	Be able to ...
+
+------------------------------------------------------------------------------
+
+Upper Intermediate
+------------------
+bufdo
+	:bufdo e    to re-read all open buffers from disk
+windo
+argdo
+macros
+	:h key-notation
+
+	record with qa yadda-yadda q
+	add additional commands with capital letter: qA more-yadda q
+	paste into document with "ap to edit commands
+	re-read into register with 0"ay$ when cursor is on the line of commands
+	@a to execute
+	@@ to re-execute last macro (or : command, incidentally)
+	10@a to run macro 10 times
+	999@a to run it so many times it approximates 'repeat for as many times as possible'
+	but see the next para about causing the macro to have a fail case or making it
+	recursive.
+
+	with a command that will fail, the macro aborts execution, so 1000@x will
+	allow you to run it until it can't (providing you give a good fail, like
+	moving down a line (so it doesn't wrap around the buffer and actually try to
+	execute 1000 times)).
+	jamessan says you can also make the macro recursive...?
+
+:h expand()
+:h filename-modifiers
+
+maps
+	map \x :tabe <c-r>=expand('%:h')<CR>/
+
+==============================================================================
+                                                *lv_M* *learnvim-Advanced*
+ADVANCED TOPICS ~
+
+Competencies ~
+
+On completing this section, you will:
+
+|lv_A_I|	Be able to ...
+
+------------------------------------------------------------------------------
+
+Advanced
+--------
+custom commands
+customising the menu in gvim
+vim scripting
+writing plugins
+variable scope (g: s: a:, etc)
+:h feature-list - know if we're running in vim or gvim  --  if has("gui_running")
 
 ==============================================================================
 CREDITS ~
@@ -361,91 +542,19 @@ annotated version of the vimrc options can be found at
 http://github.com/loota/vimfiles/blob/master/vim_usual_options.txt.
 
 ==============================================================================
+
 NOTES
+-----
 
-
-*Zathrus*
-configure vim
-the biggest is probably properly configuring your vim -- a simple but highly
-effective thing is to let vim take care of indenting and use ftplugins by
-having "filetype indent plugin on" in your .vimrc and then don't try to set
-the other indent options yourself
-
-beyond that, tags, learning how to use buffers (:ls, :b #, :b name, bn, bp, ctrl-6, etc)
-:bufdo, :windo, and :argdo are also very powerful for doing changes to massive numbers of files
-
-e.g.
-:bufdo e    to re-read all open buffers from disk
-  and
-
-:set hidden
-
-text_objects
-
-*jokajak*
-
-macros
-
-record with qa yadda-yadda q
-add additional commands with capital letter: qA more-yadda q
-paste into document with "ap to edit commands
-re-read into register with 0"ay$ when cursor is on the line of commands
-@a to execute
-@@ to re-execute last macro (or : command, incidentally)
-10@a to run macro 10 times
-999@a to run it so many times it approximates 'repeat for as many times as possible'
-but see the next para about causing the macro to have a fail case or making it
-recursive.
-
-with a command that will fail, the macro aborts execution, so 1000@x will
-allow you to run it until it can't (providing you give a good fail, like
-moving down a line (so it doesn't wrap around the buffer and actually try to
-execute 1000 times)).
-jamessan says you can also make the macro recursive...?
-
-*graywh* *ludwig*
-the help system, and navigating the tags with ctrl-] and ctrl-t
-:h help-context
-
-to replace all /,x/ with /, x/:  s/,\zs\ze[^ ]/ /   s/,[^ ]\@!/, /   s/,\([^ ]\)/, \1/
-
---
-
-
-:h key-notation
-:h ins-completion
-
-the gx commands
-motion.txt
-text-objects
-
-Windows, and the :only command
-
-variable scope (g: s: a:, etc)
-
-:h filename-modifiers
-:h expand()
-
-:h feature-list - know if we're running in vim or gvim
-also, if has("gui_running")
-
-:set paste and :set pastetoggle
-or with :set mouse=a you can middle-click to paste without worrying about :set paste / nopaste / pastetoggle
-Note: You need a vim compiled with X11 for access to the clipboard (echo has('X11')) will show 1 if you do.
-
-Return to where you last jumped from with `` or ''. `` is line+character, '' is line only. :help mark-motions
-
-Use |=| to reformat source code.
-
-Use |:retab| to change between tabs and spaces.
-
-*spiiph*
+spiiph:
 The reason that people like Vim so much is the possibility to combine operators with movements and objects.
 
-DON'TS -- Collect MORE of these from the gurus
+DON'TS
 
-*spiiph*
-don't set st and et at the same time
+spiiph:
+don't set ts and et at the same time
+
+#vim:
 06:20:19 < bioe007> DarkDigitalDream: imo ts=sts=4 and :set et is nicest
 06:20:33 < bioe007> except for makefiles, where ts=sts=8 and :set noet
 06:20:40 < jamessan> there's no reason to change 'ts' if you're setting 'et'
@@ -458,13 +567,14 @@ don't set 'switchbuf' in conjunction with :l* commands
 Vim FAQ
 http://vim.wikia.com/wiki/Vim_IRC_FAQ
 
-Best Plugins
+Best Plugins (need more)
 * NERD Tree
 * NERD Commenter
 * Surround
 * TagList
+* CSApprox (we get so many #vim questions that are solved with this)
 
-Vim Links
+Vim Links  (urls are rarely a good idea to embed in help text because of their transient nature :-/ )
 ---------
 
 * http://vim.wikia.com/wiki/Vim_Tips_Wiki
