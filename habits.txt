@@ -4,3 +4,5 @@ Collection of Habits and Unhabits
 - teach user to use 'C' and 'D' instead of 'c$' and 'd$'
 - use 'ea' append text to the end of a word instead of single character motions or 'i'
 - replace word XYZ with word ABC using "ryw, cw<CTRL-R>r, then n.n.
+  * for this one, you could do:  ye, cw<ctrl-r>0, n.n.
+    you might also need yE in some cases, or ytX (where X is replaceable)
